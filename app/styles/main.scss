@@ -1,0 +1,43 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+table {
+
+	tr {
+
+		td {
+			padding: 50px;
+		}
+
+		.cell-00 {
+			border-right: 2px solid black;
+			border-bottom: 2px solid black;
+		}
+
+		.cell-01 {
+			border-right: 2px solid black;
+			border-bottom: 2px solid black;
+		}
+		.cell-02 {
+			border-bottom: 2px solid black;
+		}
+		.cell-10 {
+			border-right: 2px solid black;
+			border-bottom: 2px solid black;
+		}
+
+		.cell-11 {
+			border-right: 2px solid black;
+			border-bottom: 2px solid black;
+		}
+		.cell-12 {
+			border-bottom: 2px solid black;
+		}
+		.cell-20 {
+			border-right: 2px solid black;
+		}
+
+		.cell-21 {
+			border-right: 2px solid black;
+		}
+	}
+}
