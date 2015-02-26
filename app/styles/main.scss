@@ -42,10 +42,27 @@ table {
 	}
 }
 
+h1 {
+	margin-bottom: 25px;
+}
 .x {
-	background-color: red;
+	display: inline-block;
+	background-color: blue;
+	width: 50px;
+	height: 25px;
+	color: white;
+	font-weight: bold;
+	margin-bottom: 50px;
+	text-align: center;
 }
 
 .o {
-	background-color: blue;
+	display: inline-block;
+	background-color: red;
+	width: 50px;
+	height: 25px;
+	color: white;
+	font-weight: bold;
+	margin-bottom: 50px;
+	text-align: center;
 }
