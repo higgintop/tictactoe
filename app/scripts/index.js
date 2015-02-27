@@ -5,6 +5,7 @@ var player;
 
 
 $(function init() {
+
     // check to see if unfinished board exists
     fb.once('value', function(snapshot) {
     	var games = snapshot.val();
@@ -167,110 +168,6 @@ function showScore(score , winningPlayer) {
 	  }
 	}
 }
-
-
-
-
-
-
-
-
-
-
-/*
-
-function checkGameStatus() {
-
-
-
-	// check to see if anyone has won by looking at current board
-    if (currentBoard[0][0] === 'X' && currentBoard[0][1] === 'X' && currentBoard[0][2] === 'X'){
-    	status = "WIN";
-    }
-    else if (currentBoard[1][0] === 'X' && currentBoard[1][1] === 'X' && currentBoard[1][2] === 'X'){
-    	status = "WIN";
-    }
-    else if (currentBoard[2][0] === 'X' && currentBoard[2][1] === 'X' && currentBoard[2][2] === 'X'){
-    	status = "WIN";
-    }
-    else if (currentBoard[0][0] === 'X' && currentBoard[1][0] === 'X' && currentBoard[2][0] === 'X'){
-    	return "WIN";
-    }
-    else if (currentBoard[0][1] === 'X' && currentBoard[1][1] === 'X' && currentBoard[2][1] === 'X'){
-    	return "WIN";
-    }
-    else if (currentBoard[0][2] === 'X' && currentBoard[2][1] === 'X' && currentBoard[2][2] === 'X'){
-    	return "WIN";
-    }
-     else if (currentBoard[0][0] === 'X' && currentBoard[1][1] === 'X' && currentBoard[2][2] === 'X'){
-    	return "WIN";
-    }
-     else if (currentBoard[0][2] === 'X' && currentBoard[1][1] === 'X' && currentBoard[2][0] === 'X'){
-    	status = "WIN";
-    	console.log("STATUS in IF = ", status);
-    }
-
-     else if (currentBoard[0][0] === 'O' && currentBoard[0][1] === 'O' && currentBoard[0][2] === 'O'){
-    	return "WIN";
-    }
-    else if (currentBoard[1][0] === 'O' && currentBoard[1][1] === 'O' && currentBoard[1][2] === 'X'){
-    	return "WIN";
-    }
-    else if (currentBoard[2][0] === 'O' && currentBoard[2][1] === 'O' && currentBoard[2][2] === 'O'){
-    	return "WIN";
-    }
-    else if (currentBoard[0][0] === 'O' && currentBoard[1][0] === 'O' && currentBoard[2][0] === 'O'){
-    	return "WIN";
-    }
-    else if (currentBoard[0][1] === 'O' && currentBoard[1][1] === 'O' && currentBoard[2][1] === 'O'){
-    	return "WIN";
-    }
-   else  if (currentBoard[0][2] === 'O' && currentBoard[2][1] === 'O' && currentBoard[2][2] === 'O'){
-    	return "WIN";
-    }
-    else  if (currentBoard[0][0] === 'O' && currentBoard[1][1] === 'O' && currentBoard[2][2] === 'O'){
-    	return "WIN";
-    }
-    else  if (currentBoard[0][2] === 'O' && currentBoard[1][1] === 'O' && currentBoard[2][0] === 'O'){
-    	return "WIN";
-    }
-
-    // if currentboard has no spaces left at this point 
-    // return a tie
-    var temp = currentGame.freeSpaces - 1;
-
-    if (temp <= 0) {
-    	console.log("GOING TO RETURN A TIE", temp);
-    	return "TIE";
-    }
-    else {
-    	console.log("TEMP", temp);
-    	currentGameRef.update({freeSpaces: temp});
-    	currentGameRef.update({board: currentBoard});
-
-
-        // swap players
-    	if(player === 'X'){
-  		// now its O turn
-  	  	currentGameRef.update({whoseTurn: 'O'});
-
-	  	}
-	  	else if (player === 'O') {
-	  		// now its X turn
-	  		currentGameRef.update({whoseTurn: 'X'});
-	  	}
-    	return "INPLAY";
-    }
-
-}*/
-
-
-
-
-
-
-
-
 
 
 
