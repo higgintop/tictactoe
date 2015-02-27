@@ -36,7 +36,6 @@ $('td').on('click', function(event) {
 		alert('invalid move');
 	}
 	else {
-		console.log("IN CLICK player is ", player);
 		if(player === 'X') {
 			$boardSpace.css( "background-color", "red" );
 			makeMove(player,row,col);
@@ -115,6 +114,7 @@ function makeMove(player, row, col) {
     if ((currentBoard[0][0] === 'X' && currentBoard[0][1] === 'X' && currentBoard[0][2] === 'X') ||(currentBoard[1][0] === 'X' && currentBoard[1][1] === 'X' && currentBoard[1][2] === 'X') ||(currentBoard[2][0] === 'X' && currentBoard[2][1] === 'X' && currentBoard[2][2] === 'X') ||(currentBoard[0][0] === 'X' && currentBoard[1][0] === 'X' && currentBoard[2][0] === 'X') ||(currentBoard[0][1] === 'X' && currentBoard[1][1] === 'X' && currentBoard[2][1] === 'X') || (currentBoard[0][2] === 'X' && currentBoard[1][2] === 'X' && currentBoard[2][2] === 'X') |(currentBoard[0][0] === 'X' && currentBoard[1][1] === 'X' && currentBoard[2][2] === 'X') ||(currentBoard[2][0] === 'X' && currentBoard[1][1] === 'X' && currentBoard[0][2] === 'X') ||(currentBoard[0][0] === 'O' && currentBoard[0][1] === 'O' && currentBoard[0][2] === 'O') ||(currentBoard[1][0] === 'O' && currentBoard[1][1] === 'O' && currentBoard[1][2] === 'O') ||(currentBoard[2][0] === 'O' && currentBoard[2][1] === 'O' && currentBoard[2][2] === 'O') ||(currentBoard[0][0] === 'O' && currentBoard[1][0] === 'O' && currentBoard[2][0] === 'O') ||(currentBoard[0][1] === 'O' && currentBoard[1][1] === 'O' && currentBoard[2][1] === 'O') ||(currentBoard[0][2] === 'O' && currentBoard[1][2] === 'O' && currentBoard[2][2] === 'O') ||(currentBoard[0][0] === 'O' && currentBoard[1][1] === 'O' && currentBoard[2][2] === 'O') ||(currentBoard[2][0] === 'O' && currentBoard[1][1] === 'O' && currentBoard[0][2] === 'O') ){
 	  var winner;
 
+	  // winner is opposite of last player
       if (player === 'X'){
   	    winner = 'O';
   	  }
